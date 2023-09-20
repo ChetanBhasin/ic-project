@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: your-image-repository/others-api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env:
+  - name: BUCKET_NAME
+    value: "test-bucket"
+  - name: OBJECT_SIZE
+    value: "100"
+  - name: OBJECT_COUNT
+    value: "10"
+
+aws:
+  accessKeyId: YOUR_AWS_ACCESS_KEY_ID
+  secretAccessKey: YOUR_AWS_SECRET_ACCESS_KEY

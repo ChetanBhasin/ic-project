@@ -1,0 +1,14 @@
+spec:
+  containers:
+  - name: {{ .Chart.Name }}
+    image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+    imagePullPolicy: {{ .Values.image.pullPolicy }}
+    env:
+    {{- range .Values.env }}
+      - name: {{ .name }}
+        value: {{ .value | quote }}
+    {{- end }}
+    - name: AWS_ACCESS_KEY_ID
+      value: {{ .Values.aws.accessKeyId | quote }}
+    - name: AWS_SECRET_ACCESS_KEY
+      value: {{ .Values.aws.secretAccessKey | quote }}
