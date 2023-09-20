@@ -1,0 +1,6 @@
+.direnv/
+.terraform/
+.tfstate/
+.direnv/
+.terraform.tfstate
+.terraform.tfstate.backup
