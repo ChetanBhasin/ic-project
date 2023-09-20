@@ -4,3 +4,4 @@
 .direnv/
 .terraform.tfstate
 .terraform.tfstate.backup
+target/
